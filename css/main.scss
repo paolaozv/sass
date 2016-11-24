@@ -17,7 +17,7 @@
 		height: $base-tamanio-esfera;
 		width: $base-tamanio-esfera;
 		padding: $base-tamanio-esfera/4;
-		box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+		animation: pulse 2s infinite;
 	}
 	
 	.estrella-1 {
@@ -52,5 +52,17 @@
 	.estrella-7 {
 		@include star-center(15px, 15px);
 		@include star(10px);
+	}
+
+	@keyframes pulse {
+	  	0% {
+	    	box-shadow: 0 0 0 0 rgba(255, 153, 51, 0.4);
+	  	}
+	  	70% {
+	      	box-shadow: 0 0 0 10px rgba(255, 153, 51, 0);
+	  	}
+	  	100% {
+	      	box-shadow: 0 0 0 0 rgba(255, 153, 51, 0);
+	  	}
 	}
 }

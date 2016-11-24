@@ -38,7 +38,7 @@
     height: 100px;
     width: 100px;
     padding: 25px;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900; }
+    animation: pulse 2s infinite; }
   .container .estrella-1 .star-five {
     margin: 12.5px 0;
     position: relative;
@@ -384,5 +384,12 @@
       -ms-transform: rotate(-70deg);
       -o-transform: rotate(-70deg);
       content: ''; }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 153, 51, 0.4); }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 153, 51, 0); }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 153, 51, 0); } }
 
 /*# sourceMappingURL=main.css.map */
